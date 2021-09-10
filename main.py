@@ -1,6 +1,6 @@
 import discord
 import os
-
+from server import host
 
 client=discord.Client()
 
@@ -17,5 +17,5 @@ async def on_message(message):
   if message.content.startswith('!hello'):
     await message.channel.send('Hai')
     
-
+host()
 client.run(os.environ['Token'])
